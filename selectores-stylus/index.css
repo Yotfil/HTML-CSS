@@ -1,0 +1,75 @@
+/* * {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+} */
+div {
+  padding: 100px;
+}
+
+body,
+html {
+  background-color: green;
+}
+
+.hola1 {
+  background-color: blueviolet;
+}
+
+#hola1 {
+  background-color: orangered;
+}
+
+html .hola1 {
+  background-color: yellowgreen;
+}
+
+html .hola1 {
+  background-color: cornflowerblue;
+}
+
+.hola1>p {
+  border: 1px solid black;
+}
+
+.hola1+div {
+  border: 3px solid white;
+}
+
+.hola1~div {
+  border: 4px solid burlywood;
+}
+
+div:hover .hola3>p {
+  width: 250%;
+}
+
+input:focus {
+  border-radius: 20%;
+}
+
+div :nth-child(3) {
+  border: 8px solid salmon;
+}
+
+/*escoge en orden contrario*/
+div :nth-last-child(1) {
+  border: 5px solid blue;
+}
+
+div :nth-child(odd) {
+  background-color: aqua;
+  padding: 5px;
+}
+
+div:nth-of-type(2) {
+  background-color: violet;
+  padding: 5px;
+}
+
+/*Poner first o last en vez de nth super util para dar clases a primeros o ultimos*/
+div:nth-last-of-type(3n-1) {
+  background-color: chartreuse;
+  border: 4px solid orange;
+  border-radius: 5px;
+}

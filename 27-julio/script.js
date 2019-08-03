@@ -97,12 +97,23 @@
 //   }
 // };
 
+// const numMas = function(sec, num) {
+//   if (typeof num === "number") {
+//     if (sec % 2 === 0) {
+//       console.log("Es par ")
+//     } else {
+//       console.log("Es impar")
+//     }
+//   } else {
+//     console.log("Agrega un numero, por favor por favor, numero")
+//   }
+// };
 const numMas = function(sec, num) {
   if (typeof num === "number") {
-    if (sec % 2 === 0) {
-      console.log("Es par ")
+    if ((num * 3) % 4 === 0) {
+      console.log("Querido " + sec + " el " + num + " x 3 es multiplo de 4")
     } else {
-      console.log("Es impar")
+      console.log("Querido " + sec + " el " + num + " x 3 no es multiplo de 4")
     }
   } else {
     console.log("Agrega un numero, por favor por favor, numero")

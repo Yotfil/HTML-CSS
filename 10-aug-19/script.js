@@ -30,9 +30,31 @@
 //   console.log(`me gusta la ${frutas[cont]}`);
 // }
 
-const listNumber = [10, 1, 2, 3, 4, 6, 54, 775];
-let cuenta = 0;
-for (let cont = 0; cont < listNumber.length; cont += 1) {
-  cuenta = cuenta + listNumber[cont];
-}
-console.log(cuenta);
+// const listNumber = [10, 1, 2, 3, 4, 6, 54, 775];
+// let cuenta = 0;
+// for (let cont = 0; cont < listNumber.length; cont += 1) {
+//   cuenta = cuenta + listNumber[cont];
+// }
+// console.log(cuenta);
+
+// const num = function (numeros) {
+//     const listNumber = [10, 1, 2, 3, 4, 6, 54, 775];
+//     let cuenta = 0;
+//     for (let cont = 0; cont < listNumber.length; cont += 1) {
+//       cuenta = cuenta + listNumber[cont];
+//     }
+//     console.log(cuenta);
+
+
+
+// const palindromo = function(loQueSea) {
+
+
+//   const stringNumero = String(loQueSea);
+//   const minusculaPalindromo = stringNumero.toLowerCase();
+//   const arrayPalindromo = minusculaPalindromo.split("");
+//   const reversePalindromo = arrayPalindromo.reverse();
+//   const stringPalindromo = reversePalindromo.join("");
+
+//   console.log(stringPalindromo === minusculaPalindromo);
+// }

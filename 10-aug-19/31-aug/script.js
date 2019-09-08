@@ -30,10 +30,12 @@ sumador(pedirNumeros);*/
 //   }
 // }
 
-
 const listWord = userList => {
+  let palabraLarga = "";
   for (let cont = 0; cont < userList.length; cont += 1) {
-    if (userList[cont].length)
-
+    if (userList[cont].length > palabraLarga.length) {
+      palabraLarga = userList[cont];
+    }
   }
+  console.log(palabraLarga);
 }

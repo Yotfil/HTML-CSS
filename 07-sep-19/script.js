@@ -23,4 +23,5 @@ const finalOperation = function(a, b, c) {
       higherResult = operatorList[cont];
     }
   }
+  console.log(higherResult);
 }

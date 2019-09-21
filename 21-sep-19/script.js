@@ -64,3 +64,5 @@ const nroItemList = itemList => {
 }
 const cuantasListas = prompt("¿Cuantas listas quieres crear?")
 nroItemList(cuantasListas)
+
+elementoTraidoDelQuerySelector.addEventListener("click", nombreFuncion)

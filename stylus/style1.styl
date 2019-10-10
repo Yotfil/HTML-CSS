@@ -1,0 +1,51 @@
+h1Rojo = red
+colors = {
+    p: black
+    h1: blue
+}/*Sirve para guardar información y llamarla posteriormente como objeto*/
+arrayColors = green orange
+btnMixin(color1, colorFondo)
+    color:color1
+    border-color:color1
+    background: colorFondo
+    i
+        background:color1
+        color:colorFondo
+    &:hover
+        color:colorFondo
+        border-color:colorFondo
+        background: color1
+        i
+            background:colorFondo
+            color:color1
+
+
+
+
+div
+    color: arrayColors[0]
+    p
+        font-family: Arial, Helvetica, sans-serif
+        font-size: 16px
+        display: inline-block
+        padding: 50px
+        background-color: #ffb1ff
+        box-shadow:1px 1px 3px #eee
+    h1
+        font-family: 'Times New Roman', Times, serif
+        font-weight: bolder
+        font-size: 60px
+        text-align: center
+        margin: 0 0 20px
+        color: arrayColors[1]
+    .second
+        width: 500px
+        height @width
+        background: @color
+        btnMixin(#444, #553)
+        background rgba(red, 0.5)
+
+    button
+        btnMixin(#884232, #546587)
+
+

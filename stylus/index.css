@@ -1,0 +1,62 @@
+div {
+  color: #008000;
+}
+div p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  display: inline-block;
+  padding: 50px;
+  background-color: #ffb1ff;
+  box-shadow: 1px 1px 3px #eee;
+}
+div h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  font-size: 60px;
+  text-align: center;
+  margin: 0 0 20px;
+  color: #ffa500;
+}
+div .second {
+  width: 500px;
+  height: 500px;
+  background: #008000;
+  color: #444;
+  border-color: #444;
+  background: #553;
+  background: rgba(255,0,0,0.5);
+}
+div .second i {
+  background: #444;
+  color: #553;
+}
+div .second:hover {
+  color: #553;
+  border-color: #553;
+  background: #444;
+}
+div .second:hover i {
+  background: #553;
+  color: #444;
+}
+div button {
+  color: #884232;
+  border-color: #884232;
+  background: #546587;
+}
+div button i {
+  background: #884232;
+  color: #546587;
+}
+div button:hover {
+  color: #546587;
+  border-color: #546587;
+  background: #884232;
+}
+div button:hover i {
+  background: #546587;
+  color: #884232;
+}
+body {
+  background-color: #ccc;
+}

@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.main {
+  background-color: #011c80;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo__img {
+  width: 50px;
+  margin: 10px;
+}
+.logo__name {
+  font-size: 21px;
+}
+.logo__subname {
+  font-size: 16px;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu__item {
+  list-style: none;
+  width: 135px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu__item:hover {
+  background-color: #0055ab;
+}
+.menu__item--subitem a::before {
+  content: "▾";
+  padding-right: 5px;
+}
+.menu__item a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

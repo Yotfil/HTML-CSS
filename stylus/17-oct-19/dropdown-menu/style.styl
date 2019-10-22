@@ -1,67 +1,112 @@
+/* *Para isntalar global con stylus se usa -g
+para usar mejor código se usa nib - se escribe la posicion y la ubicación de una
+    EJ: absolute: top 10px right 15px
+para el media query más limpio se usa rupture
+
+* */
+@import "rupture"
+
 font-size-SM = 16px
 font-size-LG = 21px
 font-size-MD = 12px
 color-white = white
 color-blue = #011c80
 color-blue--light = #0055ab
+color-gray = #333333
 height-options-menu = 50px
 sizing-XXS = 5px
 sizing-XS = 10px
 sizing-SM = 50px
-sizing-MD = 135px
-sizing-LG = 270px
-font-family-sans = -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+sizing-MD = 70px
+sizing-LG = 135px
+sizing-XL = 270px
+font-family-sans = -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif
 font-style-italic = italic
 
 *
-    padding: 0
-    margin: 0
     box-sizing: border-box
+    margin: 0
+    padding: 0
+
+ul
+ol
+    list-style: none
 
 a
+    color: inherit
     text-decoration: none
-    color:inherit
 
 .main
     background-color: color-blue
-    display: flex
-    justify-content: space-between
+    border-bottom: 3px solid color-blue--light
+    box-shadow: 0 3px 9px color-gray
     color: color-white
+    display: flex
     font-family: font-family-sans
+    justify-content: space-between
+
+    +above(600px)
+        background: black
+
 .logo
-    display:flex
     align-items: center
+    display: flex
+
     &__img
-        width: sizing-SM
         margin: sizing-XS
+        width: sizing-SM
+
     &__name
         font-size: font-size-LG
+
     &__subname
         font-size: font-size-SM
+
 .menu
     display: flex
     flex-wrap: wrap
+
     &__item
-        list-style: none
-        width: sizing-MD
-        height: 100%
-        display: flex
         align-items: center
+        display: flex
+        height: 100%
         justify-content: center
+        width: sizing-LG
+
         &:hover
             background-color: color-blue--light
+
         &--subitem
-            a
-                &::before
-                    content:"▾"
-                    padding-right:sizing-XXS
+            &:hover .submenu
+                display: block
 
         a
-            width: 100%
-            height 100%
-            display: flex
             align-items: center
+            display: flex
+            height: 100%
             justify-content: center
+            width: 100%
 
+.flecha
+    &::before
+        content: "▾"
+        padding-right: sizing-XXS
 
+.submenu
+    // absolute: top sizing-MD right sizing-XL
+    background: color-blue
+    border-bottom: 3px solid color-blue--light
+    border-top: 3px solid color-blue--light
+    box-shadow: 0 3px 9px color-gray
+    display: none
+    position: absolute
+    right: sizing-XL
+    text-outline: sizing-MD
+    top: sizing-MD
+    width: sizing-XL
 
+    &__item
+        height: sizing-SM
+
+        &:hover
+            background: color-blue--light

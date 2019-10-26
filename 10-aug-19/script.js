@@ -47,14 +47,11 @@
 
 
 
-// const palindromo = function(loQueSea) {
-
-
-//   const stringNumero = String(loQueSea);
-//   const minusculaPalindromo = stringNumero.toLowerCase();
-//   const arrayPalindromo = minusculaPalindromo.split("");
-//   const reversePalindromo = arrayPalindromo.reverse();
-//   const stringPalindromo = reversePalindromo.join("");
-
-//   console.log(stringPalindromo === minusculaPalindromo);
-// }
+ const palindromo = function(loQueSea) {
+   const stringNumero = String(loQueSea);
+   const minusculaPalindromo = stringNumero.toLowerCase();
+   const arrayPalindromo = minusculaPalindromo.split("");
+   const reversePalindromo = arrayPalindromo.reverse();
+   const stringPalindromo = reversePalindromo.join("");
+   console.log(stringPalindromo === minusculaPalindromo);
+ }

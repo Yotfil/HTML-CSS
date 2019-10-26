@@ -1,7 +1,7 @@
 const people = [
     {
         name: 'Juan',
-        age: 19,
+        age: 18,
         type: 'male'
     },
     {
@@ -10,7 +10,7 @@ const people = [
         type: 'male'
     },
     {
-        age: 21,
+        age: 19,
         name: 'Natalia',
         type: 'female'
     },
@@ -50,32 +50,50 @@ const peopleCanDrink = () => {
     return personCanDrink;
 };
 
-const peopleInGroups = () => {
-    let personCantDrink = [];
-    let personCanDrink = [];
-    for (let i = 0; i < people.length; i += 1) {
-        let person = people[i];
-        if (isOverage(person.age)) {
-            personCanDrink.push(person.name);
-        } else {
-            personCantDrink.push(person.name);
-        }
-    }
-    return [personCantDrink, personCanDrink];
-};
+// const peopleInGroups = () => {
+//     let personCantDrink = [];
+//     let personCanDrink = [];
+//     for (let i = 0; i < people.length; i += 1) {
+//         let person = people[i];
+//         if (isOverage(person.age)) {
+//             personCanDrink.push(person.name);
+//         } else {
+//             personCantDrink.push(person.name);
+//         }
+//     }
+//     return [personCantDrink, personCanDrink];
+// };
 
+// const allPeopleCanDrink = () => {
+//     const personCantDrink = peopleInGroups()[0];
+//     if (personCantDrink.length >= 1) {
+//         return false;
+//     } else {
+//         return true;
+//     }
+// };
+
+// const someoneCanDrink = () => {
+//     debugger;
+//     const personCanDrink = peopleInGroups()[1];
+//     if (personCanDrink.length >= 1) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// };
 const allPeopleCanDrink = () => {
-    const personCantDrink = peopleInGroups()[0];
-    if (personCantDrink.length >= 1) {
-        return false;
-    } else {
+    const personCanDrink = peopleCanDrink();
+    if (personCanDrink.length === people.length) {
         return true;
+    } else {
+        return false;
     }
 };
 
 const someoneCanDrink = () => {
-    debugger;
-    const personCanDrink = peopleInGroups()[1];
+   // debugger;
+    const personCanDrink = peopleCanDrink();
     if (personCanDrink.length >= 1) {
         return true;
     } else {

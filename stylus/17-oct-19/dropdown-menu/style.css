@@ -18,17 +18,21 @@ a {
   text-decoration: none;
 }
 .main {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
   background-color: #011c80;
   border-bottom: 3px solid #0055ab;
   box-shadow: 0 3px 9px #333;
   color: #fff;
   display: flex;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  justify-content: space-between;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   .main {
-    background: #000;
+    justify-content: space-between;
+    width: 100vw;
+    flex-direction: row;
   }
 }
 .logo {
@@ -47,14 +51,26 @@ a {
 }
 .menu {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
+}
+@media only screen and (min-width: 800px) {
+  .menu {
+    flex-direction: row;
+  }
 }
 .menu__item {
   align-items: center;
   display: flex;
-  height: 100%;
+  height: 50px;
   justify-content: center;
-  width: 135px;
+  width: 100%;
+}
+@media only screen and (min-width: 800px) {
+  .menu__item {
+    width: 135px;
+    height: 100%;
+  }
 }
 .menu__item:hover {
   background-color: #0055ab;
@@ -69,9 +85,17 @@ a {
   justify-content: center;
   width: 100%;
 }
-.flecha::before {
-  content: "▾";
-  padding-right: 5px;
+@media only screen and (min-width: 800px) {
+  .flecha::before {
+    content: "▾";
+    padding-right: 5px;
+  }
+}
+@media only screen and (max-width: 799px) {
+  .flecha::after {
+    content: "▾";
+    padding-right: 5px;
+  }
 }
 .submenu {
   background: #011c80;
@@ -80,10 +104,15 @@ a {
   box-shadow: 0 3px 9px #333;
   display: none;
   position: absolute;
-  right: 270px;
-  text-outline: 70px;
-  top: 70px;
   width: 270px;
+  left: 270px;
+  top: 120px;
+}
+@media only screen and (min-width: 800px) {
+  .submenu {
+    right: 270px;
+    top: 70px;
+  }
 }
 .submenu__item {
   height: 50px;

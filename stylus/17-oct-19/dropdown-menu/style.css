@@ -65,6 +65,7 @@ a {
   height: 50px;
   justify-content: center;
   width: 100%;
+  border-bottom: 1px solid #0055ab;
 }
 @media only screen and (min-width: 800px) {
   .menu__item {
@@ -116,6 +117,7 @@ a {
 }
 .submenu__item {
   height: 50px;
+  border-bottom: 1px solid #0055ab;
 }
 .submenu__item:hover {
   background: #0055ab;

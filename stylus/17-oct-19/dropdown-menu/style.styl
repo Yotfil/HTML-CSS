@@ -47,11 +47,13 @@ a
     color: color-white
     display: flex
     font-family: font-family-sans
+    min-height: 100vh
 
     +above(800px)
         justify-content: space-between
         width: 100vw
         flex-direction: row
+        min-height: auto
 
 .logo
     align-items: center
@@ -78,7 +80,8 @@ a
     &__item
         align-items: center
         display: flex
-        height: sizing-SM
+        flex-direction: column
+        // height: sizing-SM
         justify-content: center
         width: 100%
         border-bottom: 1px solid color-blue--light
@@ -86,13 +89,7 @@ a
         +above(800px)
             width: sizing-LG
             height: 100%
-
-        &:hover
-            background-color: color-blue--light
-
-        &--subitem
-            &:hover .submenu
-                display: block
+            position: relative
 
         a
             align-items: center
@@ -100,17 +97,30 @@ a
             height: 100%
             justify-content: center
             width: 100%
+            padding: 15px 0
+
+        &:hover
+        &:focus
+            background-color: color-blue--light
+
+        &--subitem
+            &:hover
+            &:focus
+                .submenu
+                    display: block
 
 .flecha
+    &::after
+        content: "▾"
+        padding-right: sizing-XXS
+
     +above(800px)
         &::before
             content: "▾"
             padding-right: sizing-XXS
 
-    +below(799px)
         &::after
-            content: "▾"
-            padding-right: sizing-XXS
+            content: ""
 
 .submenu
     // absolute: top sizing-MD right sizing-XL
@@ -119,14 +129,15 @@ a
     border-top: 3px solid color-blue--light
     box-shadow: 0 3px 9px color-gray
     display: none
-    position: absolute
     width: sizing-XL
-    left: sizing-XL
-    top: sizing-ML
 
+    // left: sizing-XL
+    // top: sizing-ML
     +above(800px)
-        right: sizing-XL
-        top: sizing-MD
+        right: 0
+        bottom: 0
+        position: absolute
+        transform: translateY(100%)
 
     &__item
         height: sizing-SM

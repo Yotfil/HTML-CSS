@@ -28,6 +28,7 @@ font-style-italic = italic
     box-sizing: border-box
     margin: 0
     padding: 0
+    transition: all 0.3s ease-in-out
 
 ul
 ol
@@ -40,8 +41,7 @@ a
 .main
     display: flex
     flex-direction: column
-    width: sizing-XL
-    background-color: color-blue
+    width: 100%
     border-bottom: 3px solid color-blue--light
     box-shadow: 0 3px 9px color-gray
     color: color-white
@@ -49,11 +49,57 @@ a
     font-family: font-family-sans
     min-height: 100vh
 
+    &--open
+        // .menu
+        // transform: translateX(0)
+        .hamburger__inner
+            transform: translateY(10px) rotate(45deg)
+
+            &::before
+                opacity: 0
+                transform: translateY(-20px) rotate(90deg)
+
+            &::after
+                transform: translateY(-20px) rotate(-90deg)
+
     +above(800px)
         justify-content: space-between
         width: 100vw
         flex-direction: row
         min-height: auto
+        background-color: color-blue
+
+.hamburger-menu
+    background-color: color-blue
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 20px
+    border-bottom: 1px solid color-blue--light
+
+.hamburger
+    min-height: 30px
+    width: sizing-SM
+    position: relative
+
+    &__inner
+        transform-origin: center center
+
+        &
+        &::after
+        &::before
+            background-color: white
+            position: absolute
+            width: 40px
+            height: 4px
+            border-radius: 5px
+            content: ""
+
+        &::after
+            top: 20px
+
+        &::before
+            top: 10px
 
 .logo
     align-items: center
@@ -73,6 +119,10 @@ a
     display: flex
     flex-direction: column
     flex-wrap: wrap
+    background-color: color-blue
+    width: sizing-XL
+    min-height: 100vh
+    transform: translateX(-100%)
 
     +above(800px)
         flex-direction: row

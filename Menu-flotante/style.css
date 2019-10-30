@@ -1,0 +1,46 @@
+.main{    
+    background: #f4f4f4;
+}
+.individual{
+    background: rgb(167, 255, 132);
+    height: 800px;
+}
+.pareja{
+    background: rgb(255, 215, 155);
+    height: 800px;
+}
+.familiar{
+    background: rgb(255, 179, 255);
+    height: 800px;
+}
+.menu{
+    width: 5%;
+    background: gold;
+    position: fixed;
+    right: 0;
+    top:100px;
+}
+.contenedor-icon{
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(255, 255, 172)
+}
+.contenedor-icon:hover, .active{
+    background: rgb(212, 127, 0);
+}
+.menu a{
+    display: inline-block;
+    width: 100%;    
+}
+.icon{
+    width: 50px;
+}
+.interiores{
+    width: 100%;
+    height: 50px;
+    background: rgb(255, 255, 255, .4);
+}
+.individual, .pareja, .familiar{
+    display: flex;
+    align-items: center;
+}

@@ -28,7 +28,7 @@ font-style-italic = italic
     box-sizing: border-box
     margin: 0
     padding: 0
-    transition: all 0.3s ease-in-out
+    // transition: all 0.3s ease-in-out
 
 ul
 ol
@@ -50,17 +50,19 @@ a
     min-height: 100vh
 
     &--open
-        // .menu
-        // transform: translateX(0)
-        .hamburger__inner
-            transform: translateY(10px) rotate(45deg)
+        +below(799px)
+            .menu
+                transform: translateX(0)
 
-            &::before
-                opacity: 0
-                transform: translateY(-20px) rotate(90deg)
+            .hamburger__inner
+                transform: translateY(10px) rotate(45deg)
 
-            &::after
-                transform: translateY(-20px) rotate(-90deg)
+                &::before
+                    opacity: 0
+                    transform: translateY(-20px) rotate(90deg)
+
+                &::after
+                    transform: translateY(-20px) rotate(-90deg)
 
     +above(800px)
         justify-content: space-between
@@ -70,36 +72,43 @@ a
         background-color: color-blue
 
 .hamburger-menu
-    background-color: color-blue
-    display: flex
-    justify-content: space-between
-    align-items: center
-    padding: 0 20px
-    border-bottom: 1px solid color-blue--light
+    +below(799px)
+        background-color: color-blue
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0 20px
+        border-bottom: 1px solid color-blue--light
 
 .hamburger
-    min-height: 30px
-    width: sizing-SM
-    position: relative
+    +below(799px)
+        min-height: 30px
+        width: sizing-SM
+        position: relative
+        cursor: pointer
 
-    &__inner
-        transform-origin: center center
+        &__inner
+            transform-origin: center center
 
-        &
-        &::after
-        &::before
-            background-color: white
-            position: absolute
-            width: 40px
-            height: 4px
-            border-radius: 5px
-            content: ""
+            &
+            &::after
+            &::before
+                background-color: white
+                position: absolute
+                width: 40px
+                height: 4px
+                border-radius: 5px
+                content: ""
+                transition: all 0.3s ease-in-out
+                // transition-timing-function: ease
+                // transition-duration: 0.2s
+                // transition-property: transform, opacity
 
-        &::after
-            top: 20px
+            &::after
+                top: 20px
 
-        &::before
-            top: 10px
+            &::before
+                top: 10px
 
 .logo
     align-items: center
@@ -118,14 +127,19 @@ a
 .menu
     display: flex
     flex-direction: column
-    flex-wrap: wrap
+    // flex-wrap: wrap
     background-color: color-blue
     width: sizing-XL
     min-height: 100vh
     transform: translateX(-100%)
+    transition: all 0.3s ease-in-out
 
     +above(800px)
         flex-direction: row
+        transition: auto
+        transform: translateX(0)
+        min-height: auto
+        width: auto
 
     &__item
         align-items: center

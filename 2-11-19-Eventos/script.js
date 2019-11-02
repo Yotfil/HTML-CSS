@@ -54,3 +54,5 @@ document.addEventListener("DOMContentLoaded", () => {
     name.addEventListener("change", getName);
     name.addEventListener("keyup", getName);
 });
+
+//hacer que el nombre se imprima con el color que se escriba
